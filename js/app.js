@@ -90,6 +90,7 @@ function Count(statarr) {
   }
 console.log(Count(successAjax(xhttp)))
 
+
 // 5. Feladat II.
 
 function getMaximumCapacityShip(ship) {
@@ -125,22 +126,22 @@ console.log(allPassengers(successAjax(xhttp))))
 function longest(spaceship) {
   var longestship = 0;
   var shipname = "";
-  for (var i = 1; i < spaceship.length; i++) {
-    if (spaceship[i].lengthiness > longestship) {
-      longestship = spaceship[i].lengthiness;
+  for (var i = 0; i < spaceship.length; i++) {
+    if (parseInt(spaceship[i].lengthiness) > longestship) {
+      longestship = parseInt(spaceship[i].lengthiness)
       shipname = spaceship[i].image
     }
+
+  } return longestship;
+
+  console.log(allPassengers(successAjax(xhttp)))
+
+
+
+  function successAjax(xhttp) {
+    // Innen lesz elérhető a JSON file tartalma, tehát az adatok amikkel dolgoznod kell
+    var userDatas = JSON.parse(xhttp.responseText);
+    // Innen lehet hívni.
+    console.log(userDatas);
   }
-} return longestship;
-
-console.log(allPassengers(successAjax(xhttp)))
-
-
-
-function successAjax(xhttp) {
-  // Innen lesz elérhető a JSON file tartalma, tehát az adatok amikkel dolgoznod kell
-  var userDatas = JSON.parse(xhttp.responseText);
-  // Innen lehet hívni.
-  console.log(userDatas);
-}
-getData('/json/spaceships.json', successAjax);
+  getData('/json/spaceships.json', successAjax);
