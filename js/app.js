@@ -31,7 +31,7 @@ function bubbleSort(a, par) {
 bubbleSort(successAjax(xhttp), 'cost_in_credits');
 
 for (i = 0; i < JSON.parse(xhttp.responseText).length; i++) {
-  console.log(JSON.parse(xhttp.responseText[i]);
+  console.log(JSON.parse(xhttp.responseText[i]))
 }
 
 // 2.Feladat
@@ -66,37 +66,51 @@ function Shipdatas() {
   document.getElementById("Shipelements").innerHTML = Shipdatas;
 }
 console.log(bubbleSort(successAjax(xhttp), 'cost_in_credits'));
-console.log(ConsumablesNull(successAjax(xhttp));
-console.log(ConsumablesNullrewriteUnknown(successAjax(xhttp));
+console.log(ConsumablesNull(successAjax(xhttp)))
+console.log(ConsumablesNullrewriteUnknown(successAjax(xhttp))
 
 // 5. Feladat I.
 
 function Count(statarr) {
-  var x = 0;
-  for (var i = 0; i < statarr.length; i++) {
-    if (statarr[i].crew === 1) {
-      x = x + 1;
+    var x = 0;
+    for (var i = 0; i < statarr.length; i++) {
+      if (statarr[i].crew === 1) {
+        x = x + 1;
+      }
     }
+    return x;
   }
-  return x;
-}
 console.log(Count(successAjax(xhttp)))
 
 // 5. Feladat II.
 
 function getMaximumCapacityShip(ship) {
-  if (ship === null) {
-    return null;
-  }
-  var maxcargocapacity = ship[0];
-  for (var i = 0; i < ship.length; i++) {
-    if (ship[i].cargo_capacity < maxcargocapacity[i].cargo_capacity) {
-      maxcargocapacity = ship[i];
-
+    if (ship === null) {
+      return null;
     }
-  } return maxcargocapacity;
-}
+    var maxcargocapacity = ship[0];
+    for (var i = 0; i < ship.length; i++) {
+      if (ship[i].cargo_capacity < maxcargocapacity[i].cargo_capacity) {
+        maxcargocapacity = ship[i];
+
+      }
+    } return maxcargocapacity;
+  }
 console.log(getMaximumCapacityShip(successAjax(xhttp)))
+
+
+// 5. Feladat III.
+
+function allPassengers(passnum)
+var fullpass = 0; {
+  for (var i = 0; i < passnum.length; i++) {
+    fullpass = fullpass + parseInt(passnum[i].passengers);
+  }
+}
+console.log(fullpass)
+
+console.log(allPassengers(successAjax(xhttp))))
+
 
 
 
