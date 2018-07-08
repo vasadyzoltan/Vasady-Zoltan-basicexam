@@ -50,12 +50,14 @@ ConsumablesNull(successAjax(xhttp));
 // 3. Feladat
 
 function ConsumablesNullrewriteUnknown(Unknownarray) {
-  for (var i in Unknownarray) {
-    if (Unknownarray[i] === null); {
-      Unknownarray[i] = "Unknown"
+  for (var i = 0; i < passnum.length; i++) {
+    for (var k in passnum[i]) {
+      if (passnum[i][k] === "null") {
+        passnum[i][k] = "unknown"
+      }
     }
   }
-  return Unknownarray;
+  console.log(passnum);
 
 }
 ConsumablesNullrewriteUnknown(successAjax(xhttp));
