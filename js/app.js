@@ -120,6 +120,21 @@ console.log(fullpass)
 console.log(allPassengers(successAjax(xhttp))))
 
 
+// 5. Feladat IV.
+
+function longest(spaceship) {
+  var longestship = 0;
+  var shipname = "";
+  for (var i = 1; i < spaceship.length; i++) {
+    if (spaceship[i].lengthiness > longestship) {
+      longestship = spaceship[i].lengthiness;
+      shipname = spaceship[i].image
+    }
+  }
+} return longestship;
+
+console.log(allPassengers(successAjax(xhttp)))
+
 
 
 function successAjax(xhttp) {
