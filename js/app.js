@@ -37,12 +37,19 @@ for (i = 0; i < JSON.parse(xhttp.responseText).length; i++) {
 // 2.Feladat
 
 function ConsumablesNull(modarray) {
-  for (var i in modarray) {
-    if (modarray[i].consumables === null) {
-      delete modarray[i].consumables
+  var jel = 0;
+  for (var i = 0; i < modarray.length; i++) {
+    for (var k in modarray[i]) {
+      if (modarray[i][k] === "null") {
+        jel = 1
+      }
+    }
+    if (jel == 1) {
+      jel = 0;
+      delete modarray[i]
     }
   }
-  return modarray;
+  console.log(modarray);
 
 }
 ConsumablesNull(successAjax(xhttp));
@@ -58,7 +65,6 @@ function ConsumablesNullrewriteUnknown(Unknownarray) {
     }
   }
   console.log(passnum);
-
 }
 ConsumablesNullrewriteUnknown(successAjax(xhttp));
 
