@@ -28,11 +28,6 @@ function bubbleSort(a, par) {
     }
   } while (swapped);
 }
-bubbleSort(successAjax(xhttp), 'cost_in_credits');
-
-for (i = 0; i < JSON.parse(xhttp.responseText).length; i++) {
-  console.log(JSON.parse(xhttp.responseText[i]))
-}
 
 
 // 2.Feladat
@@ -69,7 +64,7 @@ function ConsumablesNullrewriteUnknown(Unknownarray) {
 
 function Shipdatas() {
 
-  console.log(ConsumablesNullrewriteUnknown(Unknownarray)
+  console.log(ConsumablesNullrewriteUnknown(userDatas)
 }
 
 // 5. Feladat I.
@@ -124,22 +119,29 @@ function longest(spaceship) {
   }
 
 
+  // 6. Feladat
 
+  function searchforShipByModel(spaceobject, milkyway) {
+    for (var i = 0; i < spaceobject.length; i++) {
+      if (spaceobject[i].model.toUpperCase().indexOf(milkyway.toUpperCase()) > -1) {
+        return spaceobject[i];
+      }
+    }
 
+    function successAjax(xhttp) {
+      // Innen lesz elérhető a JSON file tartalma, tehát az adatok amikkel dolgoznod kell
+      var userDatas = JSON.parse(xhttp.responseText);
+      // Innen lehet hívni.
+      console.log(userDatas);
+      bubbleSort(userDatas, 'cost_in_credits')
+      ConsumablesNull(userDatas);
+      ConsumablesNullrewriteUnknown(userDatas);
+      Shipdatas(userDatas);
+      Count(userDatas);
+      getMaximumCapacityShip(userDatas);
+      allPassengers(userDatas);
+      longest(userDatas);
+      searchforShipByModel(userDatas);
 
-  function successAjax(xhttp) {
-    // Innen lesz elérhető a JSON file tartalma, tehát az adatok amikkel dolgoznod kell
-    var userDatas = JSON.parse(xhttp.responseText);
-    // Innen lehet hívni.
-    console.log(userDatas);
-    bubbleSort(userDatas, 'cost_in_credits')
-    ConsumablesNull(userDatas);
-    ConsumablesNullrewriteUnknown(userDatas);
-    Shipdatas(userDatas);
-    Count(userDatas);
-    getMaximumCapacityShip(userDatas);
-    allPassengers(userDatas);
-    longest(userDatas);
-
-  }
-  getData('/json/spaceships.json', successAjax);
+    }
+    getData('/json/spaceships.json', successAjax);
