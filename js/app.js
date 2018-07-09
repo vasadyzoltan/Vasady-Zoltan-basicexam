@@ -150,7 +150,7 @@ function longest(spaceship) {
     Count(userDatas);
     getMaximumCapacityShip(userDatas);
     allPassengers(userDatas);
-    longest(userDatas)
+    longest(userDatas);
 
   }
   getData('/json/spaceships.json', successAjax);
