@@ -70,13 +70,13 @@ function Shipdatas() {
 // 5. Feladat I.
 
 function Count(statarr) {
-  var x = 0;
+  var onecrew = 0;
   for (var i = 0; i < statarr.length; i++) {
     if (statarr[i].crew === "1") {
-      x = x + 1;
+      onecrew = onecrew + 1;
     }
   }
-  return x;
+  return onecrew;
 }
 
 
