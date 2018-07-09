@@ -52,7 +52,7 @@ function ConsumablesNull(modarray) {
   console.log(modarray);
 
 }
-ConsumablesNull(successAjax(xhttp));
+
 
 // 3. Feladat
 
@@ -143,9 +143,14 @@ function longest(spaceship) {
     var userDatas = JSON.parse(xhttp.responseText);
     // Innen lehet hívni.
     console.log(userDatas);
-    //bubbleSort(successAjax(xhttp), 'cost_in_credits')
-    //ConsumablesNull(successAjax(xhttp));
-
+    bubbleSort(userDatas, 'cost_in_credits')
+    ConsumablesNull(userDatas);
+    ConsumablesNullrewriteUnknown(userDatas);
+    Shipdatas(userDatas);
+    Count(userDatas);
+    getMaximumCapacityShip(userDatas);
+    allPassengers(userDatas);
+    longest(userDatas)
 
   }
   getData('/json/spaceships.json', successAjax);
