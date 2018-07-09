@@ -73,8 +73,8 @@ ConsumablesNullrewriteUnknown(successAjax(xhttp));
 function Shipdatas() {
 
   console.log(bubbleSort(successAjax(xhttp), 'cost_in_credits'));
-  console.log(ConsumablesNull(successAjax(xhttp)))
-  console.log(ConsumablesNullrewriteUnknown(successAjax(xhttp));
+  console.log(ConsumablesNull(successAjax(xhttp)));
+  console.log(ConsumablesNullrewriteUnknown(successAjax(xhttp))
 }
 
 // 5. Feladat I.
@@ -143,5 +143,9 @@ function longest(spaceship) {
     var userDatas = JSON.parse(xhttp.responseText);
     // Innen lehet hívni.
     console.log(userDatas);
+    //bubbleSort(successAjax(xhttp), 'cost_in_credits')
+    //ConsumablesNull(successAjax(xhttp));
+
+
   }
   getData('/json/spaceships.json', successAjax);
