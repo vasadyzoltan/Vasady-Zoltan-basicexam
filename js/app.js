@@ -69,9 +69,7 @@ function ConsumablesNullrewriteUnknown(Unknownarray) {
 
 function Shipdatas() {
 
-  console.log(bubbleSort(successAjax(xhttp), 'cost_in_credits'));
-  console.log(ConsumablesNull(successAjax(xhttp)));
-  console.log(ConsumablesNullrewriteUnknown(successAjax(xhttp))
+  console.log(ConsumablesNullrewriteUnknown(Unknownarray)
 }
 
 // 5. Feladat I.
@@ -79,30 +77,27 @@ function Shipdatas() {
 function Count(statarr) {
   var x = 0;
   for (var i = 0; i < statarr.length; i++) {
-    if (statarr[i].crew === 1) {
+    if (statarr[i].crew === "1") {
       x = x + 1;
     }
   }
   return x;
 }
-console.log(Count(successAjax(xhttp)))
 
 
 // 5. Feladat II.
 
 function getMaximumCapacityShip(ship) {
-  if (ship === null) {
-    return null;
-  }
-  var maxcargocapacity = ship[0];
-  for (var i = 0; i < ship.length; i++) {
-    if (ship[i].cargo_capacity < maxcargocapacity[i].cargo_capacity) {
-      maxcargocapacity = ship[i];
-
+  var biggestship = 0;
+  var shipname = "";
+  for (var i = 0; i < spaceship.length; i++) {
+    if (parseInt(spaceship[i].cargo_capacity) > biggestship) {
+      biggestship = parseInt(spaceship[i].cargo_capacity)
+      shipname = spaceship[i].model
     }
-  } return maxcargocapacity;
+  }
+  return longestship;
 }
-console.log(getMaximumCapacityShip(successAjax(xhttp)))
 
 
 // 5. Feladat III.
@@ -113,9 +108,6 @@ var fullpass = 0; {
     fullpass = fullpass + parseInt(passnum[i].passengers);
   }
 }
-console.log(fullpass)
-
-console.log(allPassengers(successAjax(xhttp))))
 
 
 // 5. Feladat IV.
@@ -128,10 +120,10 @@ function longest(spaceship) {
       longestship = parseInt(spaceship[i].lengthiness)
       shipname = spaceship[i].image
     }
+    return longestship;
+  }
 
-  } return longestship;
 
-  console.log(allPassengers(successAjax(xhttp)))
 
 
 
